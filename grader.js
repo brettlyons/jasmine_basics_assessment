@@ -1,6 +1,6 @@
 module.exports = {
 
-  //type Number -> String; pure.
+  //type Number -> String;
   letterGrader: function ( score ) {
     var outputString = "F";
     var scoreMap = {
@@ -25,7 +25,7 @@ module.exports = {
     }
   },
 
-  //type [Number] -> String; pure.
+  //type [Number] -> String;
   averageGrade: function ( gradesArray ) {
     var sum = gradesArray.reduce(function ( a, b ) {
       return a + b;
@@ -33,7 +33,7 @@ module.exports = {
     return String(sum / gradesArray.length);
   },
 
-  // type [Number] -> String; pure.
+  // type [Number] -> String;
   medianGrade: function ( gradesArray ) {
     if ( gradesArray.length % 2 == 0 ) {
       var a = gradesArray[gradesArray.length/2 - 1];
@@ -46,7 +46,7 @@ module.exports = {
     }
   },
 
-  //type [Number] -> String; pure.
+  //type [Number] -> String;
   modeGrade: function ( gradesArray ) {
   var indexOfMax = 0;
   var countOfMax = 0;
