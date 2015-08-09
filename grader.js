@@ -9,7 +9,7 @@ module.exports = {
       7: "C",
       6: "D",
     };
-    if ( !Number(score)) {
+    if ( !Number(score) || score > 100 ) {
       return (score + " not a valid score");
     }
 
@@ -17,7 +17,7 @@ module.exports = {
       outputString = scoreMap[Math.floor(score/10)];
     }
     outputString += plusOrMinus ( score );
-    return outputString;
+    return String(outputString);
 
     function plusOrMinus( score ) {
       var output = (score % 10  > 6 ) ? '+' : (score % 10 < 4 ) ? '-' : '';
